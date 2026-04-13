@@ -16,15 +16,15 @@ describe('BuildingService', () => {
 
     it('should have all required fields populated for every building', () => {
       LANDMARK_BUILDINGS.forEach(b => {
-        expect(b.id).toBeTruthy();
-        expect(b.name).toBeTruthy();
-        expect(b.address).toBeTruthy();
-        expect(b.floors).toBeGreaterThan(0);
-        expect(b.yearBuilt).toBeGreaterThan(0);
-        expect(b.owner).toBeTruthy();
-        expect(b.description).toBeTruthy();
-        expect(typeof b.geocode.lat).toBe('number');
-        expect(typeof b.geocode.lng).toBe('number');
+        expect(b.id, `id missing on ${b.name}`).toBeTruthy();
+        expect(b.name, `name missing on ${b.id}`).toBeTruthy();
+        expect(b.address, `address missing on ${b.id}`).toBeTruthy();
+        expect(b.floors, `floors missing on ${b.id}`).toBeGreaterThan(0);
+        expect(b.yearBuilt, `yearBuilt missing on ${b.id}`).toBeGreaterThan(0);
+        expect(b.owner, `owner missing on ${b.id}`).toBeTruthy();
+        expect(b.description, `description missing on ${b.id}`).toBeTruthy();
+        expect(typeof b.geocode.lat, `geocode.lat missing on ${b.id}`).toBe('number');
+        expect(typeof b.geocode.lng, `geocode.lng missing on ${b.id}`).toBe('number');
       });
     });
   });
