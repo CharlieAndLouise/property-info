@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx ng:*)",
+      "Bash(npm install:*)",
+      "Bash(git commit -m ':*)",
+      "Bash(npx vitest:*)",
+      "Bash(ng test:*)",
+      "Bash(git -C c:/work/building-info diff 8aa3c3a..2a7cf2a)"
+    ]
+  }
+}
