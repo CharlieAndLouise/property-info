@@ -123,6 +123,9 @@ export class MapComponent implements AfterViewInit, OnDestroy {
   private openPanel(building: Building): void {
     this.closePanel();
 
+    const isMobile = window.innerWidth <= 600;
+    const panelWidth = isMobile ? '100vw' : '400px';
+
     const positionStrategy = this.overlay
       .position()
       .global()
@@ -134,7 +137,7 @@ export class MapComponent implements AfterViewInit, OnDestroy {
       hasBackdrop: true,
       backdropClass: 'cdk-overlay-transparent-backdrop',
       height: '100vh',
-      width: '400px',
+      width: panelWidth,
     });
 
     const portal = new ComponentPortal(BuildingPanelComponent);
