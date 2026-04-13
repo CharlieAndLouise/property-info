@@ -1,5 +1,4 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
@@ -12,7 +11,6 @@ import { Building } from '../../models/building.model';
   selector: 'app-building-panel',
   standalone: true,
   imports: [
-    CommonModule,
     MatToolbarModule,
     MatListModule,
     MatCardModule,
