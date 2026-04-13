@@ -1,4 +1,4 @@
 export const environment = {
-  production: false,
+  production: true,
   mapboxToken: 'YOUR_MAPBOX_TOKEN_HERE'
 };
