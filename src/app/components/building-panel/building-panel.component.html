@@ -1,0 +1,47 @@
+<div class="panel-wrapper" [@slideIn]>
+  <mat-toolbar color="primary">
+    <span class="panel-title">{{ building.name }}</span>
+    <span class="toolbar-spacer"></span>
+    <button mat-icon-button (click)="closed.emit()" aria-label="Close panel">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <mat-list>
+    <mat-list-item>
+      <mat-icon matListItemIcon>location_on</mat-icon>
+      <span matListItemTitle>Address</span>
+      <span matListItemLine>{{ building.address }}</span>
+    </mat-list-item>
+
+    <mat-list-item>
+      <mat-icon matListItemIcon>domain</mat-icon>
+      <span matListItemTitle>Floors</span>
+      <span matListItemLine>{{ building.floors }}</span>
+    </mat-list-item>
+
+    <mat-list-item>
+      <mat-icon matListItemIcon>calendar_today</mat-icon>
+      <span matListItemTitle>Year Built</span>
+      <span matListItemLine>{{ building.yearBuilt }}</span>
+    </mat-list-item>
+
+    <mat-list-item>
+      <mat-icon matListItemIcon>person</mat-icon>
+      <span matListItemTitle>Owner</span>
+      <span matListItemLine>{{ building.owner }}</span>
+    </mat-list-item>
+
+    <mat-list-item>
+      <mat-icon matListItemIcon>pin_drop</mat-icon>
+      <span matListItemTitle>Geocode</span>
+      <span matListItemLine>{{ building.geocode.lat }}, {{ building.geocode.lng }}</span>
+    </mat-list-item>
+  </mat-list>
+
+  <mat-card class="description-card">
+    <mat-card-content>
+      <p>{{ building.description }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>

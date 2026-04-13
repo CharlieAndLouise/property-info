@@ -1,0 +1,29 @@
+.panel-wrapper {
+  width: 400px;
+  height: 100vh;
+  background: white;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.25);
+
+  @media (max-width: 600px) {
+    width: 100vw;
+  }
+}
+
+.panel-title {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.toolbar-spacer {
+  flex: 1;
+}
+
+.description-card {
+  margin: 16px;
+  flex-shrink: 0;
+}
