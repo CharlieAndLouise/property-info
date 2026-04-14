@@ -37,7 +37,7 @@ export class MapComponent implements AfterViewInit, OnDestroy {
 
     this.ngZone.runOutsideAngular(() => {
       this.map = this.mapboxService.createMap(this.mapContainer.nativeElement, {
-        style: 'mapbox://styles/mapbox/dark-v11',
+        style: 'mapbox://styles/mapbox/streets-v12',
         center: [-73.9857, 40.7484],
         zoom: 15.5,
         pitch: 45,
