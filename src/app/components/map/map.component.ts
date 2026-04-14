@@ -78,7 +78,7 @@ export class MapComponent implements AfterViewInit, OnDestroy {
         'fill-extrusion-color': '#aaaaaa',
         'fill-extrusion-height': ['get', 'height'],
         'fill-extrusion-base': ['get', 'min_height'],
-        'fill-extrusion-opacity': 0.8,
+        'fill-extrusion-opacity': 0.5,
       },
     });
   }
